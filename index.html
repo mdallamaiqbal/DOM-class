@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="banner">
         <h1>This is my Banner</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem ipsum quasi <span>Hello js dom</span> ipsam, commodi earum voluptatem quod, dignissimos asperiores distinctio perferendis facere! Quos nisi libero pariatur, recusandae ratione dolores. Corporis!</p>
     </header>
     <h1>Welcome to my DOM</h1>
     <section>
@@ -32,6 +33,7 @@
     <script>
         console.log("hello javascript");   
         console.log('Dom(Documents Object Model)');
+        /* .getElementsByTagName() */
         const liCollection=document.getElementsByTagName('li')
         console.log(liCollection);
         for(const li of liCollection){
@@ -45,14 +47,20 @@
         for(const p of paragraphCollection){
             console.log(p.innerHTML);    
         }
+          /* .getElementsById() */
         const foodTitleh2=document.getElementById('food-title');
         console.log(foodTitleh2.innerText);
-        foodTitleh2.innerText='food is great'    
+        foodTitleh2.innerText='food is great'
+        /* .getElementsByClassName() */   
         const changefood=document.getElementsByClassName('change');
         console.log(changefood);
         for(const element of changefood){
             console.log(element.innerHTML);
-            
+        }
+        /*.querySelectorAll()*/
+        const spanElements=document.querySelectorAll('#banner p span')
+        for(const span of spanElements){
+            console.log(span.innerText);
         }
         
     </script>
