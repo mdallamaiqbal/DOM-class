@@ -4,3 +4,10 @@ h1{
 #food-title{
     color: green;
 }
+.dom{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: #777;
+    font-weight: 600;
+}
