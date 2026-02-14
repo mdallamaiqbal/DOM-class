@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>This is my Banner</h1>
+    </header>
+    <h1>Welcome to my DOM</h1>
+    <section>
+         <ul>
+        <li>DOM</li>
+        <li>Connect</li>
+        <li>With html</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur alias quos magnam quibusdam fugiat qui vero explicabo, esse nobis quod! Officia nulla harum saepe consequatur. Eaque asperiores itaque quos quae.</p>
+    </section>
+    <section>
+        <h2 id="food-title">Foods I Love</h2>
+        <ul>
+            <li>Beef</li>
+            <li>Potato</li>
+            <li>Fish</li>
+            <li class="change">Burger</li>
+            <li>Pizza</li>
+        </ul>
+    </section>
+    <script>
+        console.log("hello javascript");   
+        console.log('Dom(Documents Object Model)');
+        const liCollection=document.getElementsByTagName('li')
+        console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+        const headingCollection=document.getElementsByTagName('h1')
+        for(const h1 of headingCollection){
+            console.log(h1.innerText);
+        }
+        const paragraphCollection=document.getElementsByTagName('p');
+        for(const p of paragraphCollection){
+            console.log(p.innerHTML);    
+        }
+        const foodTitleh2=document.getElementById('food-title');
+        console.log(foodTitleh2.innerText);
+        foodTitleh2.innerText='food is great'    
+        const changefood=document.getElementsByClassName('change');
+        console.log(changefood);
+        for(const element of changefood){
+            console.log(element.innerHTML);
+            
+        }
+        
+    </script>
+    <script src="./js/hello.js"></script>
+</body>
+</html>
